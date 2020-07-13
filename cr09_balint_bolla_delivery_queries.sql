@@ -14,7 +14,9 @@ INNER JOIN customer ON fk_c_address = address_id;
 --query3--
 --How many delivery are there which were sent from the customer to the company--
 
-SELECT COUNT(Depo) FROM `locations` WHERE locations.Depo = "Depo";
+SELECT COUNT(Depo) FROM `locations` WHERE locations.Depo = "Depo"; <-- worked with the old database structure
+
+SELECT COUNT(Depo) FROM `l_type` WHERE l_type.Depo = "Depo" <-- new query!
 
 --query4--
 --How many deliveries were deposited in the last 2 days?--
